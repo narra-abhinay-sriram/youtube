@@ -2,7 +2,7 @@ import React from 'react'
 
 const Sidebar = () => {
   return (
-    <div className='ml-2 mt-2 border border-gray-500 w-[150px] py-2 text-md px-1 shadow-md shadow-gray-300 rounded-md'>
+    <div className='ml-2 mt-2 mr-3 h-96 px-4 border border-gray-500 w-[150px] py-2 text-md  shadow-md shadow-gray-300 rounded-md'>
         
       <ul>
         <li>Home</li>
