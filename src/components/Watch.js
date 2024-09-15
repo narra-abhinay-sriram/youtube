@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { useDispatch } from "react-redux"
 import { useSearchParams } from "react-router-dom"
 import { onloadingvid } from "../utils/appslice"
+import Chatbox from "./Chatbox"
 
 const Watch = () => {
 const [searchparam]=useSearchParams()
@@ -14,6 +15,7 @@ useEffect(()=>{
   return (
     
     <div className="mt-20">
+      <div>
       <iframe
        width="900"
         height="455" 
@@ -22,7 +24,11 @@ useEffect(()=>{
          
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
            referrerpolicy="strict-origin-when-cross-origin" 
-           allowFullscreen></iframe>
+           allowFullscreen></iframe></div>
+
+           <div>
+            <Chatbox/>
+           </div>
     </div>
   )
 }
