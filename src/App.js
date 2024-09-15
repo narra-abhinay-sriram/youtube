@@ -25,9 +25,11 @@ function App() {
   ])
   return (
     <Provider  store={appstore}>
+     
     <div className="">
+    <RouterProvider router={get}  />
      <Header/>
-   <RouterProvider router={get}  />
+   
     </div>
     </Provider>
   );

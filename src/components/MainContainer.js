@@ -4,10 +4,10 @@ import VideoCards from './VideoCards'
 
 const MainContainer = () => {
   return (
-    <div>
+    <div className='mt-20'>
         <Buttons/>
-        
-      <VideoCards/>
+      <div className=''>
+      <VideoCards/></div>  
     </div>
   )
 }

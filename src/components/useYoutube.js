@@ -12,7 +12,7 @@ const useYoutube = () => {
     const fetchdata=async ()=>{
         const data=await fetch(Youtube_fetch)
         const json= await data.json()
-        console.log(json)
+       // console.log(json)
         dispatch(addyoutubevids(json.items))
         
     }

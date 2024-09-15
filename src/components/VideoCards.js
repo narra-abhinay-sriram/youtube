@@ -7,10 +7,10 @@ const VideoCards = () => {
     const tubedata=useSelector(store=>store.app.youtubevids)
     useYoutube()
     if(!tubedata)return 
-    console.log(tubedata)
+   // console.log(tubedata)
     
   return (
-    <div className='flex flex-wrap'>
+    <div className='flex flex-wrap '>
 
         {tubedata.map(video=>(<Link  key={video.id} to={"/watch?v="+video.id}  ><VidCard  snippet={video.snippet} statistics={video.statistics}/></Link>))}
 
