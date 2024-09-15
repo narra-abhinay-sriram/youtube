@@ -4,7 +4,8 @@ const appslice =createSlice({
     name:"app",
     initialState:{
         ismenu:true,
-        youtubevids:null
+        youtubevids:null,
+        livedata:[]
     },
     reducers:
 {
@@ -18,8 +19,12 @@ const appslice =createSlice({
    onloadingvid:(state)=>{
 
 state.ismenu=false
+   },
+   addlive:(state,action)=>{
+    state.livedata.splice(200,1)
+state.livedata.unshift(action.payload)
    }
 }
 })
-export const {changemenu,addyoutubevids,onloadingvid}=appslice.actions
+export const {changemenu,addyoutubevids,onloadingvid,addlive}=appslice.actions
 export default appslice.reducer

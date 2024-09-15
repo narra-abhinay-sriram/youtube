@@ -10,12 +10,13 @@ const dispatch=useDispatch()
 //console.log()
 useEffect(()=>{
     dispatch(onloadingvid())
-},)
+},[])
 
   return (
     
-    <div className="mt-20">
-      <div>
+    <div className="mt-20 flex flex-col w-full ">
+      <div className="flex  w-full">
+      <div className="">
       <iframe
        width="900"
         height="455" 
@@ -26,8 +27,9 @@ useEffect(()=>{
            referrerpolicy="strict-origin-when-cross-origin" 
            allowFullscreen></iframe></div>
 
-           <div>
+           <div className="ml-2 p-2  ">
             <Chatbox/>
+           </div>
            </div>
     </div>
   )
