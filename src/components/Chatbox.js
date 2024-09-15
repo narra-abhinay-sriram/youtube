@@ -12,6 +12,7 @@ useEffect(()=>{
 
 const i=setInterval(()=>{
 //fetch the api
+//api polling
  dispatch(addlive(
   {
     name:generate(),

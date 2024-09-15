@@ -15,7 +15,7 @@ const dispatch=useDispatch()
     }
    
     const fetchdata=async()=>{
-      const data= await fetch("http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q="+search)
+      const data= await fetch("https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q="+search)
       const json=await data.json()
       setsuggestion(json[1])
       dispatch(addsearch({[search]:[json[1]]}))
