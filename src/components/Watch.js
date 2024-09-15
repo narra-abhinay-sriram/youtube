@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux"
 import { useSearchParams } from "react-router-dom"
 import { onloadingvid } from "../utils/appslice"
 import Chatbox from "./Chatbox"
+import Comments from "./Comments"
 
 const Watch = () => {
 const [searchparam]=useSearchParams()
@@ -27,10 +28,11 @@ useEffect(()=>{
            referrerpolicy="strict-origin-when-cross-origin" 
            allowFullscreen></iframe></div>
 
-           <div className="ml-2 p-2  ">
+           <div className="ml-2 p-2 rounded-lg shadow-md shadow-gray-400 ">
             <Chatbox/>
            </div>
            </div>
+          <Comments/>
     </div>
   )
 }
